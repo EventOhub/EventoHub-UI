@@ -1,32 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="myApp">
-
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>EventoHub - A place for the artists</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="app.css">
-    <link rel="stylesheet" href="bower_components/Materialize/dist/css/materialize.css">
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>EventoHub - A place for the artists</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="bower_components/Materialize/dist/css/materialize.css">
 </head>
-
 <body>
-    <nav class="pink accent-4" ng-include="'header/header.html'"></nav>
-    <main ng-view></main>
-    <footer class="page-footer grey darken-3" ng-include="'footer/footer.html'"></footer>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="app.js"></script>
-    <script src="homepage/homepage.js"></script>
-    <script src="bower_components/Materialize/dist/js/materialize.js"></script>
-    <script>
-        $(document).ready(function() {
-            $(".button-collapse").sideNav();
-        });
-    </script>
+  <div header class="pink accent-4" ></div>
+  <main ng-view></main>
+  <div footer class="page-footer grey darken-3" ></div>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="homepage/homepage.js"></script>
+  <script src="bower_components/Materialize/dist/js/materialize.js"></script>
+  <script src="app.js"></script>
+  <script src="footer/footer.js"></script>
+  <script src="header/header.js"></script>
 </body>
-
 </html>

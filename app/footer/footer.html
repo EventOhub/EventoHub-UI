@@ -1,21 +1,22 @@
-<div class="container">
+<footer>
+  <div class="container">
     <div class="row">
-        <div class="col l6 s12">
-            <h5 class="white-text">Your one place to plan all events</h5>
-            <p class="grey-text text-lighten-4">musicians, photographers, wedding planners etc.</p>
-        </div>
-        <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Company</h5>
-            <ul>
-                <li><a class="grey-text text-lighten-3" href="#!">About us</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Find us on social sites</a></li>
-            </ul>
-        </div>
+      <div class="col l6 s12">
+        <h5 class="white-text">{{websiteDesc}}</h5>
+        <p class="grey-text text-lighten-4">{{websiteGenre}}</p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Company</h5>
+        <ul>
+          <li ng-repeat="x in footerOptions"><a class="grey-text text-lighten-3" href="#!">{{x}}</a></li>
+        </ul>
+      </div>
     </div>
-</div>
-<div class="footer-copyright">
+  </div>
+  <div class="footer-copyright">
     <div class="container">
-        © 2016 Copyright EventoHub.com
-        <a class="grey-text text-lighten-4 right" href="#!">User agreement</a>
+      {{copyrights}}
+      <a class="grey-text text-lighten-4 right" href="#!">User agreement</a>
     </div>
-</div>
+  </div>
+</footer>

@@ -1,14 +1,8 @@
-<div class="navbar-wrapper container">
-    <a href="#/homepage" class="brand-logo">EventoHub</a>
-    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+<nav>
+  <div class="navbar-wrapper container">
+    <a href="#/homepage" class="brand-logo">{{brandName}}</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="#">Login</a></li>
-        <li><a href="#">Contact us</a></li>
-        <li><a href="#">Join us</a></li>
+      <li ng-repeat="x in headerOptions"><a href="#">{{x}}</a></li>
     </ul>
-    <ul class="side-nav" id="mobile-demo">
-        <li><a href="#">Login</a></li>
-        <li><a href="#">Contact us</a></li>
-        <li><a href="#">Join us</a></li>
-    </ul>
-</div>
+  </div>
+</nav>
