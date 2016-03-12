@@ -38,3 +38,8 @@ body {
 main {
     flex: 1 0 auto;
 }
+
+li:hover {
+    background-color: #26a69a !important;
+    color: #eafaf9;
+}
