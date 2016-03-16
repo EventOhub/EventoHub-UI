@@ -5,7 +5,3 @@ var appModule = angular.module('myApp', ['ngRoute','myApp.homepage','myApp.regis
 appModule.config(['$routeProvider', function ($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/homepage'});
 }]);
-
-appModule.controller('appController', ['$scope', function(scope) {
-   
-}]);

@@ -7,9 +7,21 @@ angular.module('myApp.homepage', ['ngRoute'])
     controller: 'homepageCtrl'
   });
 }])
-.controller('homepageCtrl', ['$scope', function (scope) {
+.controller('homepageCtrl', ['$scope', 'dataFactory', function (scope, dataFactory) {
   var states = ['Rajasthan', 'Maharashtra', 'UP', 'Punjab'];
   var services = ['Band - Alternative Rock', 'Band - Pop', 'Band - Punk'];
+
+  getLocation();
+
+    function getLocation() {
+        dataFactory.getLocation(1)
+            .success(function (location) {
+                console.log(JSON.stringify(location));
+            })
+            .error(function (error) {
+                console.log('error ----');
+            });
+    }
 
   // state autocomplete functionality -- start
   scope.states = states;

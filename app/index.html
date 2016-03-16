@@ -8,9 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="app.css">
   <link rel="stylesheet" href="bower_components/Materialize/dist/css/materialize.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body ng-app="myApp" ng-controller="appController">
+<body ng-app="myApp">
   <div header class="pink accent-4" ></div>
   <main ng-view></main>
   <div ng-include="'registration/register.html'" ng-controller='registerCtrl'></div>
@@ -24,5 +24,6 @@
   <script src="footer/footer.js"></script>
   <script src="header/header.js"></script>
   <script src="registration/register.js"></script>
+  <script src="common/dataFactory.js"></script>
 </body>
 </html>
