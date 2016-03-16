@@ -43,3 +43,8 @@ li:hover {
     background-color: #26a69a !important;
     color: #eafaf9;
 }
+#registrationModal {
+    max-width: 28%;
+    min-height: 650px;
+    padding: 0 0 0 0px;
+};

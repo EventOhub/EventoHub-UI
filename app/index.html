@@ -8,10 +8,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="app.css">
   <link rel="stylesheet" href="bower_components/Materialize/dist/css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
+<body ng-app="myApp" ng-controller="appController">
   <div header class="pink accent-4" ></div>
   <main ng-view></main>
+  <div ng-include="'registration/register.html'" ng-controller='registerCtrl'></div>
   <div footer class="page-footer grey darken-3" ></div>
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
@@ -21,5 +23,6 @@
   <script src="app.js"></script>
   <script src="footer/footer.js"></script>
   <script src="header/header.js"></script>
+  <script src="registration/register.js"></script>
 </body>
 </html>

@@ -57,4 +57,16 @@ scope.setService = function(service){
 };
 
 // services autocomplete functionality -- end
+  // to make the material_select render -- overriding the default browser select
+  scope.initializeSelect = function () {
+    $('select').material_select();
+    $(".button-collapse").sideNav();
+
+  };
+  // Below the initialization of materialize is done, as its overriding the default behaviour of select.
+  //the below code needs to be added to the successcallback of the service
+  setTimeout(function () {
+    scope.initializeSelect();
+  }, 100);
+
 }]);

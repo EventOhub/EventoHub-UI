@@ -1,0 +1,56 @@
+<div id="registrationModal" class="modal modal-fixed-footer" >
+    <form ng-submit="signUpAction()">
+    <div class="modal-content">
+      <h5 class="center-align">Join us</h5>
+        
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="username" type="text" class="validate" ng-model="user.username">
+                            <label for="username">User name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                                <div class="input-field col s12">
+                                  <i class="material-icons prefix">perm_identity</i>
+                                            <input name="userType" type="radio" id="vendor" value = "vendor" ng-model="user.userType"/>
+                                            <label for="vendor">Vendor </label>
+                                            <input name="userType" type="radio" id="customer" value = "customer" ng-model="user.userType"/> 
+                                            <label for="customer">Customer </label>
+                                </div>    
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                           <i class="material-icons prefix">language</i>
+                            <input id="email" type="email" class="validate" ng-model="user.emailId">
+                              <label for="email">Email Id</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                             <div class="input-field col s4">
+                                  <i class="material-icons prefix">phone</i>
+                                  <input id="countryCode" type="text" class="validate" disabled ng-model="user.countryCode">
+                        </div>
+                        <div class="input-field col s8">
+                                        <label for="countryCode"></label>
+                                        <input id="mobileNo" type="number" class="validate" min="0" ng-model="user.mobileNo">
+                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">vpn_key</i> 
+                            <input id="pwd" type="password" class="validate" ng-model="user.password">
+                            <label for="pwd">Password</label>
+                        </div>
+                    </div>
+              
+    </div>
+    <div class="modal-footer">
+      <input type="checkbox" id="iAccept" class="left-align">
+      <label for="iAccept">I accept the <a href="#!" class="">terms and condition</a>
+      </label>
+        <button class="btn modal-action modal-close waves-effect btn-flat" type="submit" >Sign up</button>
+<!--      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" ng-click = "signUpAction">Sign up</a>-->
+    </div>
+    </form>
+</div>
