@@ -47,4 +47,9 @@ li:hover {
     max-width: 28%;
     min-height: 650px;
     padding: 0 0 0 0px;
-};
+}
+
+.customAutoComplete{
+    max-height: 120px; 
+    overflow-y: auto;
+}
