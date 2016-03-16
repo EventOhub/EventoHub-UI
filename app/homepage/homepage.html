@@ -2,14 +2,14 @@
   <div class="input-field col s3 offset-s2">
     <input  id="location" type="text" ng-model="selectedState" ng-change="onChangeStateFunc(selectedState)"/>
     <label for="location">Select a state or city</label>
-    <ul class="collection" ng-show="showStateList && autocompleteStateList.length > 0" class="customAutoComplete">
+    <ul class="collection customAutoComplete" ng-show="showStateList && autocompleteStateList.length > 0" >
       <li class="collection-item" ng-repeat="state in autocompleteStateList" ng-click="setState(state)" >{{state}}</li>
     </ul>
   </div>
   <div class="input-field col s3">
     <input  id="service" type="text" ng-model="selectedService" ng-change="onChangeServiceFunc(selectedService)"/>
     <label for="service">Select a service</label>
-    <ul class="collection" ng-show="showServiceList && autocompleteServiceList.length > 0" class="customAutoComplete">
+    <ul class="collection customAutoComplete" ng-show="showServiceList && autocompleteServiceList.length > 0" >
       <li class="collection-item" ng-repeat="service in autocompleteServiceList" ng-click="setService(service)" >{{service}}</li>
     </ul>
   </div>
