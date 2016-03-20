@@ -1,9 +1,9 @@
 <div class="row" style="padding-top:18%">
   <div class="input-field col s3 offset-s2">
-    <input  id="location" type="text" ng-model="selectedState" ng-change="onChangeStateFunc(selectedState)"/>
-    <label for="location">Select a state or city</label>
-    <ul class="collection customAutoComplete" ng-show="showStateList && autocompleteStateList.length > 0" >
-      <li class="collection-item" ng-repeat="state in autocompleteStateList" ng-click="setState(state)" ng-bind="state"></li>
+    <input  id="location" type="text" ng-model="selectedLocation" ng-change="onChangeLocationFunc(selectedLocation)"/>
+    <label for="location">Select a location for the event</label>
+    <ul class="collection customAutoComplete" ng-show="showLocationList && autocompleteLocationList.length > 0" >
+      <li class="collection-item" ng-repeat="location in autocompleteLocationList" ng-click="setLocation(location)" ng-bind="location.value"></li>
     </ul>
   </div>
   <div class="input-field col s3">

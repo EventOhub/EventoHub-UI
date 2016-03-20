@@ -8,14 +8,15 @@ angular.module('myApp.homepage', ['ngRoute'])
   });
 }])
 .controller('homepageCtrl', ['$scope', 'dataFactory', function (scope, dataFactory) {
-  var states = ['Rajasthan', 'Maharashtra', 'UP', 'Punjab'];
+  var location = [];
   var services = ['Band - Alternative Rock', 'Band - Pop', 'Band - Punk'];
 
   getLocation();
 
     function getLocation() {
-        dataFactory.getLocation(1)
-            .success(function (location) {
+        dataFactory.getLocation()
+            .success(function (loc) {
+                location = loc.json;
                 console.log(JSON.stringify(location));
             })
             .error(function (error) {
@@ -23,28 +24,28 @@ angular.module('myApp.homepage', ['ngRoute'])
             });
     }
 
-  // state autocomplete functionality -- start
-  scope.states = states;
-  scope.selectedState = "";
-  scope.autocompleteStateList = [];
-  scope.showStateList = false;
-  scope.onChangeStateFunc = function(selectedState){
-    scope.showStateList = true;
-    scope.autocompleteStateList = [];
-    if(selectedState !== ''){
-      $.each(states,function(key,val){
-        if(val.toUpperCase().indexOf(selectedState.toUpperCase()) != -1){
-          scope.autocompleteStateList.push(val);
+  // location autocomplete functionality -- start
+  scope.location = location;
+  scope.selectedLocation = "";
+  scope.autocompleteLocationList = [];
+  scope.showLocationList = false;
+  scope.onChangeLocationFunc = function(selectedLocation){
+    scope.showLocationList = true;
+    scope.autocompleteLocationList = [];
+    if(selectedLocation !== ''){
+      $.each(location,function(key,val){
+        if(val.value.toUpperCase().indexOf(selectedLocation.toUpperCase()) != -1){
+          scope.autocompleteLocationList.push(val);
         }
       });
     }
   };
-  scope.setState = function(state){
-    scope.selectedState = state ;
-    scope.showStateList = false;
+  scope.setLocation = function(location){
+    scope.selectedLocation = location.value ;
+    scope.showLocationList = false;
   };
 
-// state autocomplete functionality -- end
+// location autocomplete functionality -- end
 
 // services autocomplete functionality -- start
 

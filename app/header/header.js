@@ -17,8 +17,7 @@ appModule.directive('header', function () {
           $scope[action]();
       };
       $scope.loginAction = function(){
-          //$location.path('/dashboard');
-          window.location.assign('#/dashboard');
+          $location.path("/dashboard");
           console.log($location.path());
       };
       $scope.contactUsAction = function(){
