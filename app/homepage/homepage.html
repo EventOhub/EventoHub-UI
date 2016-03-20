@@ -10,7 +10,7 @@
     <input  id="service" type="text" ng-model="selectedService" ng-change="onChangeServiceFunc(selectedService)"/>
     <label for="service">Select a service</label>
     <ul class="collection customAutoComplete" ng-show="showServiceList && autocompleteServiceList.length > 0" >
-      <li class="collection-item" ng-repeat="service in autocompleteServiceList" ng-click="setService(service)" ng-bind="service"></li>
+      <li class="collection-item" ng-repeat="service in autocompleteServiceList" ng-click="setService(service)" ng-bind="service.service"></li>
     </ul>
   </div>
   <button class="btn waves-effect waves-light col s1 offset-s1" type="submit" style="margin-top:20px;" name="action">Search

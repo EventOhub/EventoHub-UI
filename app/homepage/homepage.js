@@ -9,20 +9,20 @@ angular.module('myApp.homepage', ['ngRoute'])
 }])
 .controller('homepageCtrl', ['$scope', 'dataFactory', function (scope, dataFactory) {
   var location = [];
-  var services = ['Band - Alternative Rock', 'Band - Pop', 'Band - Punk'];
+  var services = [];
 
   getLocation();
+  getServices();
 
-    function getLocation() {
-        dataFactory.getLocation()
-            .success(function (loc) {
-                location = loc.json;
-                console.log(JSON.stringify(location));
-            })
-            .error(function (error) {
-                console.log('error ----');
-            });
-    }
+  function getLocation() {
+    dataFactory.getLocation()
+    .success(function (loc) {
+      location = loc.json;
+    })
+    .error(function (error) {
+      console.log('error ----');
+    });
+  }
 
   // location autocomplete functionality -- start
   scope.location = location;
@@ -45,31 +45,41 @@ angular.module('myApp.homepage', ['ngRoute'])
     scope.showLocationList = false;
   };
 
-// location autocomplete functionality -- end
+  // location autocomplete functionality -- end
 
-// services autocomplete functionality -- start
-
-scope.services = services;
-scope.selectedService = "";
-scope.autocompleteServiceList = [];
-scope.showServiceList = false;
-scope.onChangeServiceFunc = function(selectedService){
-  scope.showServiceList = true;
-  scope.autocompleteServiceList = [];
-  if(selectedService !== ''){
-    $.each(services,function(key,val){
-      if(val.toUpperCase().indexOf(selectedService.toUpperCase()) != -1){
-        scope.autocompleteServiceList.push(val);
-      }
+  function getServices() {
+    dataFactory.getServices()
+    .success(function (ser) {
+      services = ser.json;
+    })
+    .error(function (error) {
+      console.log('error ----');
     });
   }
-};
-scope.setService = function(service){
-  scope.selectedService = service ;
-  scope.showServiceList = false;
-};
 
-// services autocomplete functionality -- end
+  // services autocomplete functionality -- start
+
+  scope.services = services;
+  scope.selectedService = "";
+  scope.autocompleteServiceList = [];
+  scope.showServiceList = false;
+  scope.onChangeServiceFunc = function(selectedService){
+    scope.showServiceList = true;
+    scope.autocompleteServiceList = [];
+    if(selectedService !== ''){
+      $.each(services,function(key,val){
+        if(val.service.toUpperCase().indexOf(selectedService.toUpperCase()) != -1){
+          scope.autocompleteServiceList.push(val);
+        }
+      });
+    }
+  };
+  scope.setService = function(service){
+    scope.selectedService = service.service ;
+    scope.showServiceList = false;
+  };
+
+  // services autocomplete functionality -- end
   // to make the material_select render -- overriding the default browser select
   scope.initializeSelect = function () {
     $('select').material_select();

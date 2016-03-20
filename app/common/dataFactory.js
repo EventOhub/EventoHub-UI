@@ -5,6 +5,9 @@ appModule.factory('dataFactory', ['$http', function($http) {
   dataFactory.getLocation = function () {
     return $http.get(urlBase + '/geolocation/location');
   };
+  dataFactory.getServices = function () {
+    return $http.get(urlBase + '/services/getServices');
+  };
 
   return dataFactory;
 }]);
