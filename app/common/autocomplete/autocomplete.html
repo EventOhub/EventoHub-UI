@@ -1,0 +1,7 @@
+<div>
+  <input id="{{identifier}}" type="text" ng-model="selectedItem" ng-change="onChangeFunc(selectedItem)"/>
+  <label for="{{identifier}}" >{{label}}</label>
+  <ul class="collection customAutoComplete" ng-show="showItemList && autocompleteItemList.length > 0" >
+    <li class="collection-item" ng-repeat="Item in autocompleteItemList" ng-click="setItem(Item)" ng-bind="Item.value"></li>
+  </ul>
+</div>

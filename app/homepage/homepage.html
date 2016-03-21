@@ -1,18 +1,6 @@
 <div class="row" style="padding-top:18%">
-  <div class="input-field col s3 offset-s2">
-    <input  id="location" type="text" ng-model="selectedLocation" ng-change="onChangeLocationFunc(selectedLocation)"/>
-    <label for="location">Select a location for the event</label>
-    <ul class="collection customAutoComplete" ng-show="showLocationList && autocompleteLocationList.length > 0" >
-      <li class="collection-item" ng-repeat="location in autocompleteLocationList" ng-click="setLocation(location)" ng-bind="location.value"></li>
-    </ul>
-  </div>
-  <div class="input-field col s3">
-    <input  id="service" type="text" ng-model="selectedService" ng-change="onChangeServiceFunc(selectedService)"/>
-    <label for="service">Select a service</label>
-    <ul class="collection customAutoComplete" ng-show="showServiceList && autocompleteServiceList.length > 0" >
-      <li class="collection-item" ng-repeat="service in autocompleteServiceList" ng-click="setService(service)" ng-bind="service.service"></li>
-    </ul>
-  </div>
+  <div class="input-field col s3 offset-s2" autocomplete datasource="location" identifier="localeId" label="localeLabel"></div>
+  <div class="input-field col s3" autocomplete datasource="services" identifier="serviceId" label="serviceLabel"></div>
   <button class="btn waves-effect waves-light col s1 offset-s1" type="submit" style="margin-top:20px;" name="action">Search
   </button>
 </div>
