@@ -41,4 +41,6 @@ angular.module('myApp.homepage', ['ngRoute'])
   scope.serviceId = "service";
   scope.serviceLabel = "Select a service"
 
+  $(".button-collapse").sideNav();
+
 }]);
