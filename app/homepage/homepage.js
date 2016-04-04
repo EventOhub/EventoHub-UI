@@ -6,6 +6,7 @@ angular.module('myApp.homepage', ['ngRoute'])
     templateUrl: 'homepage/homepage.html',
     controller: 'homepageCtrl'
   });
+  $routeProvider.when('/', {redirectTo: '/homepage' });
 }])
 .controller('homepageCtrl', ['$scope', 'dataFactory', function (scope, dataFactory) {
 
@@ -18,7 +19,7 @@ angular.module('myApp.homepage', ['ngRoute'])
       scope.location = loc.json;
     })
     .error(function (error) {
-      console.log('error ----');
+      console.log('error : '+error);
     });
   }
 
@@ -32,7 +33,7 @@ angular.module('myApp.homepage', ['ngRoute'])
       scope.services = ser.json;
     })
     .error(function (error) {
-      console.log('error ----');
+      console.log('error : '+error);
     });
   }
 
