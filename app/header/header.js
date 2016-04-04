@@ -6,7 +6,7 @@ appModule.directive('header', function () {
     templateUrl: "header/header.html",
     controller: ['$scope', '$filter','$location', function ($scope, $filter, $location) {
       var headerOptions, brandName, loginAction, contactUsAction, joinUsAction, execute;
-      headerOptions  = [{displayName: 'Login', action: 'loginAction', path:'dashboard'},
+      headerOptions  = [{displayName: 'Login', action: 'loginAction', path:'login'},
       {displayName: 'Contact us', action: 'contactUsAction'},
       {displayName: 'Join us',  action: 'joinUsAction'}];
       brandName = 'EventoHub';
