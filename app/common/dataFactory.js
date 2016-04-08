@@ -8,6 +8,10 @@ appModule.factory('dataFactory', ['$http', function($http) {
   dataFactory.getServices = function () {
     return $http.get(urlBase + '/services/getServices');
   };
+    
+  dataFactory.signup = function (requestBody) {
+    return $http.post(urlBase + '/user/signup', requestBody);
+  };
 
   return dataFactory;
 }]);

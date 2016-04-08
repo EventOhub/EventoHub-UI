@@ -1,8 +1,7 @@
-<div id="registrationModal" class="modal modal-fixed-footer">
-    <form ng-submit="signUpAction()">
-        <div class="modal-content">
+<div id="registrationModal" class="row" style="max-width: 30%;">
+    <div class="card-panel">
+        <form ng-submit="signUpAction()">
             <h5 class="center-align">Join us</h5>
-
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">account_circle</i>
@@ -44,13 +43,11 @@
                 </div>
             </div>
 
-        </div>
-        <div class="modal-footer">
             <input type="checkbox" id="iAccept" class="left-align">
             <label for="iAccept">I accept the <a href="#!" class="">terms and condition</a>
             </label>
-            <button class="btn modal-action modal-close waves-effect btn-flat" type="submit">Sign up</button>
-            <!--      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" ng-click = "signUpAction">Sign up</a>-->
-        </div>
+            <button class="btn waves-effect waves-light" type="submit">Sign up</button>
+    </div>
     </form>
+</div>
 </div>

@@ -8,7 +8,7 @@ appModule.directive('header', function () {
       var headerOptions, brandName, loginAction, contactUsAction, joinUsAction, execute;
       headerOptions  = [{displayName: 'Login', action: 'loginAction', path:'login'},
       {displayName: 'Contact us', action: 'contactUsAction'},
-      {displayName: 'Join us',  action: 'joinUsAction'}];
+      {displayName: 'Join us',  action: 'joinUsAction', path:'register'}];
       brandName = 'EventoHub';
       $scope.headerOptions = headerOptions;
       $scope.brandName = brandName;

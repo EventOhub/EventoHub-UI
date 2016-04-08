@@ -45,9 +45,7 @@ li:hover {
 }
 #registrationModal {
     max-width: 28%;
-    min-height: 650px;
-    padding: 0 0 0 0px;
-}
+   }
 
 .customAutoComplete{
     max-height: 80px !important;
