@@ -98,3 +98,12 @@ li:hover {
 .fa-heart:hover {
     color: red;
 }
+.loaderOverlay{
+    background: black none repeat scroll 0 0;
+    height: 100%;
+    opacity: 0.20;
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+    display: none;
+}

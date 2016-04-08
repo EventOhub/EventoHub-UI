@@ -1,59 +1,99 @@
-<div id="registrationModal" class="row" style="max-width: 30%;">
-    <div class="card-panel">
-        <form ng-submit="signUpAction()">
-            <h5 class="center-align">Join us</h5>
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">account_circle</i>
-                    <input id="name" type="text" class="validate" ng-model="user.name">
-                    <label for="name">Name</label>
+<div>
+    <div class="loaderOverlay">
+        <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-red">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
                 </div>
             </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">account_circle</i>
-                    <input id="username" type="text" class="validate" ng-model="user.username">
-                    <label for="username">User name</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">perm_identity</i>
-                    <input name="userType" type="radio" id="vendor" value="vendor" ng-model="user.userType" />
-                    <label for="vendor">Vendor </label>
-                    <input name="userType" type="radio" id="customer" value="customer" ng-model="user.userType" />
-                    <label for="customer">Customer </label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">language</i>
-                    <input id="email" type="email" class="validate" ng-model="user.emailId">
-                    <label for="email">Email Id</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s4">
-                    <i class="material-icons prefix">phone</i>
-                    <input id="countryCode" type="text" class="validate" disabled ng-model="user.countryCode">
-                </div>
-                <div class="input-field col s8">
-                    <label for="phoneNumber"></label>
-                    <input id="phoneNumber" type="number" class="validate" min="0" ng-model="user.phoneNumber">
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">vpn_key</i>
-                    <input id="pwd" type="password" class="validate" ng-model="user.password">
-                    <label for="pwd">Password</label>
-                </div>
-            </div>
+        </div>
+    </div>
+    <div id="registrationModal" class="row" style="max-width: 30%;">
+        <div class="card-panel">
+            <div id="registration">
+                <form ng-submit="signUpAction()">
+                    <h5 class="center-align">Join us</h5>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <!--                        <i class="material-icons prefix">account_circle</i>-->
+                            <input id="name" type="text" class="validate" ng-model="user.name">
+                            <label for="name">Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <!--                        <i class="material-icons prefix">account_circle</i>-->
+                            <input id="username" type="text" class="validate" ng-model="user.username">
+                            <label for="username">User name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <!--                        <i class="material-icons prefix">perm_identity</i>-->
+                            <input name="userType" type="radio" id="vendor" value="vendor" ng-model="user.userType" />
+                            <label for="vendor">Vendor </label>
+                            <input name="userType" type="radio" id="customer" value="customer" ng-model="user.userType" />
+                            <label for="customer">Customer </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <!--                        <i class="material-icons prefix">language</i>-->
+                            <input id="email" type="email" class="validate" ng-model="user.emailId">
+                            <label for="email">Email Id</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s4">
+                            <!--                        <i class="material-icons prefix">phone</i>-->
+                            <input id="countryCode" type="text" class="validate" disabled ng-model="user.countryCode">
+                        </div>
+                        <div class="input-field col s8">
+                            <label for="phoneNumber">Phone number</label>
+                            <input id="phoneNumber" type="number" class="validate" min="0" ng-model="user.phoneNumber">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <!--                        <i class="material-icons prefix">vpn_key</i>-->
+                            <input id="pwd" type="password" class="validate" ng-model="user.password">
+                            <label for="pwd">Password</label>
+                        </div>
+                    </div>
 
-            <input type="checkbox" id="iAccept" class="left-align">
-            <label for="iAccept">I accept the <a href="#!" class="">terms and condition</a>
-            </label>
-            <button class="btn waves-effect waves-light" type="submit">Sign up</button>
-    </form>
-</div>
+                    <input type="checkbox" id="iAccept" class="left-align" ng-model="isAgree">
+                    <label for="iAccept">I accept the <a href="#!" class="">terms and condition</a>
+                    </label>
+                    <button class="btn waves-effect waves-light right" type="submit">Sign up</button>
+                </form>
+            </div>
+            <div id="verification" style="display: none;">
+                <div ngShow="!otpVerified">
+                    <p>An OTP has been sent to the phone number you have entered. Please enter the OTP below to verify your phone number.</p>
+                    <div class="row" >
+                        <div class="input-field col s12" ngShow="!otpVerified">
+                            <input id="registrationOtp" type="number" class="validate" ng-model="otp">
+                            <label for="registrationOtp">OTP</label>
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light" ng-click="verifyOTP()">Verify OTP</button>
+                </div>
+
+                <div class="row" ngShow="!otpVerified">
+                    <div class="input-field col s12">
+                        <span style="color: #26a69a" ng-bind="otpVerificationMsg"></span>
+                    </div>
+                </div>
+                <p>An email has been sent to your email id. Please verify your email id to access our services.</p>
+
+            </div>
+        </div>
+
+    </div>
 </div>

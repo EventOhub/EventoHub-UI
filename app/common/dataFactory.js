@@ -13,6 +13,14 @@ appModule.factory('dataFactory', ['$http', function($http) {
   dataFactory.signup = function (requestBody) {
     return $http.post(urlBase + '/user/signup', requestBody);
   };
-
+    
+  dataFactory.verifyOtp = function (requestBody) {
+    return $http.post(urlBase + '/user/verifyOtp', requestBody);
+  };
+    
+  dataFactory.checkUserName = function (requestBody) {
+    return $http.post(urlBase + '/user/checkUserName', requestBody);
+  };
+    
   return dataFactory;
 }]);
