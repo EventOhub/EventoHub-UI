@@ -14,13 +14,14 @@ resisterModule.controller('registerCtrl', ['$scope', 'dataFactory', function (sc
         userType: 'vendor',
         emailId: '',
         countryCode: '+91',
-        mobileNo: '',
-        password: ''
+        phoneNumber: '',
+        password: '',
+        name:''
     };
     scope.signUpAction = function () {
-        console.log(scope.user);
+        //console.log(scope.user);
 
-        dataFactory.signup()
+        dataFactory.signup(scope.user)
             .success(function (response) {
                 console.log('success' + response.json.insertId);
             })
