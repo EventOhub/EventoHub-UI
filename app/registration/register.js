@@ -8,7 +8,6 @@ resisterModule.config(['$routeProvider', function ($routeProvider) {
 }])
 
 resisterModule.controller('registerCtrl', ['$scope', 'dataFactory', function (scope, dataFactory) {
-    //$scope.signUp = true;
     scope.user = {
         username: '',
         userType: 'vendor',
@@ -40,8 +39,6 @@ resisterModule.controller('registerCtrl', ['$scope', 'dataFactory', function (sc
         }else{
             //Show error in UI
         }
-        
-        //$scope.signUp = false;
     };
     
     //OTP verification
@@ -63,15 +60,19 @@ resisterModule.controller('registerCtrl', ['$scope', 'dataFactory', function (sc
     
     //Username availability check
     scope.unAvailable = false;
-    scope.msg = '';
+    scope.unAvailabilityMsg = '';
     scope.checkUsername = function (){
-        dataFactory.checkUserName(scope.user.username)
+        var requestBody = {username: scope.user.username};
+        dataFactory.checkUserName(requestBody)
         .success(function (response){
-            //TODO
-            //console.log(response);
+            scope.unAvailable = true;
+            if(response.json.userNameAvailable === 0){
+                scope.unAvailabilityMsg = 'User name is available.';
+            }else if(response.json.userNameAvailable === 1){
+                scope.unAvailabilityMsg = 'User name is already taken. Please chose another user name.';
+            }
         }).error(function (error) {
-            //TODO
-            //console.log('error : ' + error);
+            scope.unAvailable = false;
         });
     };
 

@@ -29,10 +29,12 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <!--                        <i class="material-icons prefix">account_circle</i>-->
-                            <input id="username" type="text" class="validate" ng-model="user.username">
+                            <input id="username" type="text" class="validate" ng-model="user.username" ng-blur="checkUsername()">
                             <label for="username">User name</label>
+                            <span ng-hide="!unAvailable" ng-bind = "unAvailabilityMsg"></span>
                         </div>
                     </div>
+                    
                     <div class="row">
                         <div class="input-field col s12">
                             <!--                        <i class="material-icons prefix">perm_identity</i>-->
@@ -73,6 +75,9 @@
                     <button class="btn waves-effect waves-light right" type="submit">Sign up</button>
                 </form>
             </div>
+            
+            
+            
             <div id="verification" style="display: none;">
                 <div ngShow="!otpVerified">
                     <p>An OTP has been sent to the phone number you have entered. Please enter the OTP below to verify your phone number.</p>
