@@ -51,3 +51,50 @@ li:hover {
     max-height: 80px !important;
     overflow-y: auto !important;
 }
+
+
+// aquired things
+
+.card-image {
+    height: 250px;
+}
+
+#profile-page-header .card-image {
+    height: 250px;
+}
+
+#profile-page-header .card-profile-image {
+    cursor: pointer;
+    left: 40px;
+    margin: 0;
+    position: absolute;
+    top: 220px;
+    width: 110px;
+    z-index: 1;
+}
+
+#profile-page-header .card-content {
+    margin-top: -40px;
+}
+
+#content .container .row {
+    margin-bottom: 0;
+}
+
+#profile-page-header .card-content .card-title {
+    margin-bottom: 0;
+}
+
+.medium-small {
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-floating {
+    border-radius: 48% !important;
+  }
+
+.fa-heart:hover {
+    color: red;
+}
