@@ -107,3 +107,53 @@ li:hover {
     z-index: 5;
     display: none;
 }
+
+.sideNav{
+    height: auto;
+    background-color: #fff;
+}
+.sideNav ul{
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+.sideNav ul li{
+    line-height: 25px;
+    float: unset;
+    border-radius: 4px;
+}
+.sideNav ul li a{
+    color: #909496;
+}
+.sideNav ul li a:hover{
+    background-color: #eee;
+    color: #909496;
+}
+.sideNav ul li a:focus{
+    background-color: #909496;
+    color: #fff;
+}
+
+.sideNav-container{
+    background-color: #eee;
+    margin-left: 10px;
+}
+
+.listing-content {
+    background: white none repeat scroll 0 0;
+    border-left: 1px solid #ccc;
+    min-height: 600px;
+    padding: 40px 40px 10px;
+    position: relative;
+}
+.border-bottom{
+    border-bottom: 1px solid #dbdbdb;
+    margin-bottom:10px;
+    margin-top:10px;
+}
+.box-border{
+   border-left: 1px solid #ccc; 
+}
+.box h6{
+   text-align: center;
+}
+

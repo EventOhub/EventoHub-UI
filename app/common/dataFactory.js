@@ -22,5 +22,9 @@ appModule.factory('dataFactory', ['$http', function($http) {
     return $http.post(urlBase + '/user/checkUserName', requestBody);
   };
     
+  dataFactory.checkUserDetails = function (requestBody) {
+    return $http.post(urlBase + '/user/checkUser', requestBody);
+  };
+    
   return dataFactory;
 }]);

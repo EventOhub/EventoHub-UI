@@ -60,8 +60,8 @@ resisterModule.controller('registerCtrl', ['$scope', 'dataFactory', function (sc
     
     //Username availability check
     scope.unAvailable = false;
-    scope.unAvailabilityMsg = '';
     scope.checkUsername = function (){
+        scope.unAvailabilityMsg = '';
         var requestBody = {username: scope.user.username};
         dataFactory.checkUserName(requestBody)
         .success(function (response){
