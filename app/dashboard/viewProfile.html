@@ -1,0 +1,63 @@
+<div>
+<!--    <div ng-include="'dashboard/profileHeader.html'"></div>-->
+    <div id="profile-page-content" class="row">
+        <div id="profile-page-sidebar" class="col s12 m4">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">About</span>
+                    <p style="color:#5c6bc0;">Queen of Punk Rock • Freelancer • Painter • Travel junkie • Surf & Ski • Dutch/Swiss • Scheveningen • Digital nomad</p>
+                </div>
+            </div>
+            <ul class="collection z-depth-1" id="profile-page-about-details">
+                <li class="collection-item">
+                    <div class="row">
+                        <div class="col s5 grey-text darken-1"><i class="fa fa-map"></i> Located</div>
+                        <div class="col s7 grey-text text-darken-4 right-align">NY, USA</div>
+                    </div>
+
+                </li>
+                <li class="collection-item">
+                    <div class="row">
+                        <div class="col s5 grey-text darken-1"><i class="fa fa-map"></i> Pay Range</div>
+                        <div class="col s7 grey-text text-darken-4 right-align" ng-bind="user.paymentDetails.payRangeMin + user.paymentDetails.currency + ' - ' +
+          user.paymentDetails.payRangeMax + user.paymentDetails.currency"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="col s12 m8" id="profile-page-wall">
+            <!-- profile-page-wall-share -->
+            <div class="row" id="profile-page-wall-share">
+                <div class="col s12">
+                    <ul class="tabs tab-profile z-depth-1" style="width: 100%;">
+                        <li class="tab col s3" style="width: 50%;"><a ng-click="changeDiv('reviews')" class="waves-effect waves-light active"> User Reviews</a>
+                        </li>
+                        <li class="tab col s3" style="width: 50%;"><a ng-click="changeDiv('form')" class="waves-effect waves-light"> Get free quotation</a>
+                        </li>
+                        <div ng-switch on="selection">
+                            <div ng-switch-when="reviews" class="indicator" style="right: 50%; left: 0px;"></div>
+                            <div ng-switch-when="form" class="indicator" style="left: 50%; right: 0px;"></div>
+                        </div>
+                </div>
+                <div ng-switch on="selection">
+
+                    <!-- UpdateStatus-->
+                    <div ng-switch-when="reviews" class="tab-content col s12 " id="UpdateStatus">
+                        <div class="card">
+                            <p>awsome artist!</p>
+                        </div>
+                    </div>
+                    <!-- AddPhotos -->
+                    <div ng-switch-when="form" class="tab-content col s12 " id="AddPhotos">
+
+                        <input id="location" placeholder="location" type="text"></input>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>

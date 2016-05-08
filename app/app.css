@@ -124,17 +124,14 @@ li:hover {
 .sideNav ul li a{
     color: #909496;
 }
-.sideNav ul li a:hover{
-    background-color: #eee;
-    color: #909496;
-}
-.sideNav ul li a:focus{
-    background-color: #909496;
+
+.sideNav ul li a:focus, a:hover{
+    background-color: #26a69a;
     color: #fff;
 }
 
 .sideNav-container{
-    background-color: #eee;
+    background-color: #fff;
     margin-left: 10px;
 }
 

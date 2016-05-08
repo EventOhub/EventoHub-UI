@@ -1,4 +1,7 @@
 <div id="dashboardHead">
     <div ng-include="'dashboard/profileHeader.html'"></div>
-    <div ng-include="'dashboard/manageDashboard.html'"></div>
+    <a ui-sref="dashboard.editProfile">Edit Profile</a>
+    <a ui-sref="dashboard.viewProfile">View Profile</a>
+    <!--    <div ng-include="'dashboard/editProfile.html'"></div>-->
 </div>
+<div ui-view></div>
