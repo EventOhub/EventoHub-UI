@@ -7,6 +7,7 @@ resisterModule.config(['$routeProvider', function ($routeProvider) {
     });
 }])
 
+//Controller
 resisterModule.controller('registerCtrl', ['$scope', 'dataFactory', function (scope, dataFactory) {
     scope.user = {
         username: '',
