@@ -3,10 +3,10 @@
       <a href="#/homepage" class="brand-logo" ng-bind="brandName"></a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li ng-repeat="x in headerOptions"><a href="#/{{x.path}}" ng-bind="x.displayName"></a></li>
+        <a ng-repeat="x in headerOptions" ui-sref="{{x.path}}" ng-bind="x.displayName"></a>
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li ng-repeat="x in headerOptions"><a href="#/{{x.path}}" ng-bind="x.displayName"></a></li>
+        <a ng-repeat="x in headerOptions" ui-sref="{{x.path}}" ng-bind="x.displayName"></a>
       </ul>
   </div>
 </nav>

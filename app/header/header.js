@@ -7,11 +7,11 @@ appModule.directive('header', function () {
     controller: ['$scope', '$filter','$location', function ($scope, $filter, $location) {
       var headerOptions, brandName, loginAction, contactUsAction, joinUsAction, execute;
       headerOptions  = [{displayName: 'Login', action: 'loginAction', path:'login'},
-      {displayName: 'Contact us', action: 'contactUsAction'},
+      {displayName: 'Contact us', action: 'contactUsAction', path:'login'},
       {displayName: 'Join us',  action: 'joinUsAction', path:'register'}];
       brandName = 'EventoHub';
       $scope.headerOptions = headerOptions;
       $scope.brandName = brandName;
     }]
-  }
+  };
 });

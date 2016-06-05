@@ -1,13 +1,13 @@
 'use strict';
-angular.module('myApp.homepage', ['ngRoute'])
+angular.module('myApp.homepage', ['ui.router'])
 
-.config(['$routeProvider', function ($routeProvider) {
-  $routeProvider.when('/homepage', {
+.config(function ($stateProvider, $urlRouterProvider) {
+  $stateProvider.state('homepage', {
+    url : '/homepage',
     templateUrl: 'homepage/homepage.html',
     controller: 'homepageCtrl'
   });
-  $routeProvider.when('/', {redirectTo: '/homepage' });
-}])
+})
 .controller('homepageCtrl', ['$scope', 'dataFactory', function (scope, dataFactory) {
 
   getLocation();
