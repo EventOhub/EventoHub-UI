@@ -12,6 +12,6 @@
     "angular-mocks": "~1.4.0",
     "html5-boilerplate": "~5.2.0",
     "Materialize": "materialize#^0.97.5",
-    "font-awesome": "fontawesome#^4.5.0"
+    "angular-ui-router": "^0.3.1"
   }
 }

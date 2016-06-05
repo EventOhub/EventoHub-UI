@@ -1,11 +1,12 @@
 'use strict';
-var resisterModule = angular.module('myApp.register', []);
-resisterModule.config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.when('/register', {
+var resisterModule = angular.module('myApp.register', ['ui.router']);
+resisterModule.config(function ($stateProvider, $urlRouterProvider) {
+   $stateProvider.state('register', {
+        url : '/register' ,
         templateUrl: 'registration/register.html',
         controller: 'registerCtrl'
     });
-}])
+});
 
 //Controller
 resisterModule.controller('registerCtrl', ['$scope', 'dataFactory', function (scope, dataFactory) {
@@ -41,7 +42,7 @@ resisterModule.controller('registerCtrl', ['$scope', 'dataFactory', function (sc
             //Show error in UI
         }
     };
-    
+
     //OTP verification
     scope.otp = '';
     scope.otpVerified = false;
@@ -58,7 +59,7 @@ resisterModule.controller('registerCtrl', ['$scope', 'dataFactory', function (sc
                 scope.otpVerificationMsg = response.err;
             });
     };
-    
+
     //Username availability check
     scope.unAvailable = false;
     scope.checkUsername = function (){
