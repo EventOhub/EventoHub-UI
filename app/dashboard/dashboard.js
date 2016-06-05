@@ -6,8 +6,8 @@ angular.module('myApp.dashboard', ['ngRoute', 'ui.router'])
     templateUrl: 'dashboard/dashboard.html',
     controller: 'dashboardCtrl'
   });
-  //$routeProvider.when('/', {redirectTo: '/homepage' });    
-    
+  //$routeProvider.when('/', {redirectTo: '/homepage' });
+
     //$urlRouterProvider.otherwise("dashboard")
         $stateProvider
             .state('dashboard', {

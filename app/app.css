@@ -148,9 +148,13 @@ li:hover {
     margin-top:10px;
 }
 .box-border{
-   border-left: 1px solid #ccc; 
+   border-left: 1px solid #ccc;
 }
 .box h6{
    text-align: center;
 }
 
+.profilecontainer{
+  align-content: center;
+  width: 80%;
+}
