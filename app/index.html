@@ -1,31 +1,131 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>EventoHub - A place for the artists</title>
-  <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="app.css">
-  <link rel="stylesheet" href="bower_components/Materialize/dist/css/materialize.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="favicon.ico">
+  <title></title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+<link href="app.css" rel="stylesheet">
+<link href="bower_components/font-awesome/css/font-awesome.css" rel="stylesheet">
 </head>
-<body ng-app="myApp">
-  <div header style="background-color:#222;" ></div>
-  <main ui-view></main>
-  <div footer class="page-footer grey darken-3" ></div>
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-  <script src="bower_components/Materialize/dist/js/materialize.js"></script>
-  <script src="app.js"></script>
-  <script src="homepage/homepage.js"></script>
-  <script src="footer/footer.js"></script>
-  <script src="header/header.js"></script>
-  <script src="registration/register.js"></script>
-  <script src="common/dataFactory.js"></script>
-  <script src="common/autocomplete/autocomplete.js"></script>
-  <script src="dashboard/dashboard.js"></script>
-  <script src="login/login.js"></script>
+<!-- NAVBAR
+================================================== -->
+<body>
+<div class="navbar-wrapper">
+  <div class="container">
+      <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">Eventohub</a>
+              </div>
+              <div id="navbar" class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav">
+                      <li class="active"><a href="#">Login</a></li>
+                      <li><a href="#">Sign Up</a></li>
+                      <li><a href="#">Contact</a></li>
+                      <li class="srch-btn"><a href="#"><i class="glyphicon glyphicon-search"></i></li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+  </div>
+</div>
+
+
+<!-- Carousel
+================================================== -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner" role="listbox">
+      <div class="item active">
+          <img class="first-slide" src="resources/images/s1.jpg" alt="First slide">
+          <div class="container">
+              <div class="carousel-caption">
+                  <h1>Your one place<br/>to plan all events</h1>
+                  </div>
+          </div>
+      </div>
+  </div>
+</div><!-- /.carousel -->
+
+<!-- /.form -->
+<section class="frm p40">
+<div class="container">
+  <div class="row">
+      <div class="col-md-12">
+<form class="form-inline">
+  <div class="form-group">
+      <select class="selectpicker slct-box">
+          <option>Select a location</option>
+          <option>Mustard</option>
+          <option>Ketchup</option>
+          <option>Relish</option>
+      </select>
+
+  </div>
+  <div class="form-group">
+      <select class="selectpicker slct-box">
+          <option>Select a Service</option>
+          <option>Mustard</option>
+          <option>Ketchup</option>
+          <option>Relish</option>
+      </select>
+
+  </div>
+  <button type="search" class="btn btn-default frm-srch">Search</button>
+</form>
+          </div>
+  </div>
+
+</div>
+</section>
+<div class="container works mb50">
+<div class="row">
+  <div class="col-md-12 text-center mb50">
+       <h1>How It Works</h1>
+  </div>
+  </div>
+  <div class="row">
+      <div class="col-md-4 text-center">
+          <p class="circle-img text-center"><a href="#"><i class="glyphicon glyphicon-search"></i></a></p>
+          <h2>Search</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p></div>
+      <div class="col-md-4">
+          <p class="circle-img text-center"><a href="#"><i class="glyphicon glyphicon-eye-open"></i></a></p>
+          <h2>Ask for Quotation</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+          </div>
+      <div class="col-md-4">
+          <p class="circle-img text-center"><a href="#"><i class="glyphicon glyphicon-ok"></i></a></p>
+          <h2>Book</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+      </div>
+  </div><!-- /.row -->
+</div>
+  <!-- FOOTER -->
+<section class="ftr">
+  <footer class="container">
+<div class="ftrcont pull-left">EventoHub is a platform for artists.<p>musicians, photographers, wsdding planners etc.</p></div>
+<div class="ftrcont pull-right">Company<p>About us</p></div>
+<div class="clearfix bb1"></div>
+      <p class="pull-right socl-icn pt20"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>
+      </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>
+      </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>
+      </a></p>
+      <p class="pt20">&copy; 2016 Copyright EventoHub.com &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">User Agreement</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Privacy Policy</a></p>
+  </footer>
+</section>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 </body>
 </html>

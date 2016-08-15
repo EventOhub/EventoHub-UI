@@ -1,0 +1,160 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+main {
+    flex: 1 0 auto;
+}
+
+li:hover {
+    background-color: #26a69a !important;
+    color: #eafaf9;
+}
+#registrationModal {
+    max-width: 28%;
+   }
+
+.customAutoComplete{
+    max-height: 80px !important;
+    overflow-y: auto !important;
+}
+
+
+// aquired things
+
+.card-image {
+    height: 250px;
+}
+
+#profile-page-header .card-image {
+    height: 250px;
+}
+
+#profile-page-header .card-profile-image {
+    cursor: pointer;
+    left: 40px;
+    margin: 0;
+    position: absolute;
+    top: 220px;
+    width: 110px;
+    z-index: 1;
+}
+
+#profile-page-header .card-content {
+    margin-top: -40px;
+}
+
+#content .container .row {
+    margin-bottom: 0;
+}
+
+#profile-page-header .card-content .card-title {
+    margin-bottom: 0;
+}
+
+.medium-small {
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-floating {
+    border-radius: 48% !important;
+  }
+
+.fa-heart:hover {
+    color: red;
+}
+.loaderOverlay{
+    background: black none repeat scroll 0 0;
+    height: 100%;
+    opacity: 0.20;
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+    display: none;
+}
+
+.sideNav{
+    height: auto;
+    background-color: #fff;
+}
+.sideNav ul{
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+.sideNav ul li{
+    line-height: 25px;
+    float: unset;
+    border-radius: 4px;
+}
+.sideNav ul li a{
+    color: #909496;
+}
+
+.sideNav ul li a:focus, a:hover{
+    background-color: #26a69a;
+    color: #fff;
+}
+
+.sideNav-container{
+    background-color: #fff;
+    margin-left: 10px;
+}
+
+.listing-content {
+    background: white none repeat scroll 0 0;
+    border-left: 1px solid #ccc;
+    min-height: 600px;
+    padding: 40px 40px 10px;
+    position: relative;
+}
+.border-bottom{
+    border-bottom: 1px solid #dbdbdb;
+    margin-bottom:10px;
+    margin-top:10px;
+}
+.box-border{
+   border-left: 1px solid #ccc;
+}
+.box h6{
+   text-align: center;
+}
+
+.profilecontainer{
+  align-content: center;
+  width: 80%;
+}
