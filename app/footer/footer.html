@@ -1,22 +1,12 @@
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col l6 s12">
-        <h5 class="white-text" ng-bind="websiteDesc"></h5>
-        <p class="grey-text text-lighten-4" ng-bind="websiteGenre"></p>
-      </div>
-      <div class="col l4 offset-l2 s12">
-        <h5 class="white-text">Company</h5>
-        <ul>
-          <li ng-repeat="x in footerOptions"><a class="grey-text text-lighten-3" href="#!" ng-bind="x"></a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="footer-copyright">
-    <div class="container" >
-      <span ng-bind="copyrights"></span>
-      <a class="grey-text text-lighten-4 right" href="#!">User agreement</a>
-    </div>
-  </div>
-</footer>
+<section class="ftr">
+  <footer class="container">
+<div class="ftrcont pull-left"><span ng-bind="websiteDesc"></span><p ng-bind="websiteGenre"></p></div>
+<div class="ftrcont pull-right">Company<p>About us</p></div>
+<div class="clearfix bb1"></div>
+      <p class="pull-right socl-icn pt20"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>
+      </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>
+      </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>
+      </a></p>
+      <p class="pt20" ng-bind="copyrights">&copy;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">User Agreement</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Privacy Policy</a></p>
+  </footer>
+</section>

@@ -1,12 +1,21 @@
-<nav>
-  <div class="navbar-wrapper container">
-      <a href="#/homepage" class="brand-logo" ng-bind="brandName"></a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <a ng-repeat="x in headerOptions" ui-sref="{{x.path}}" ng-bind="x.displayName"></a>
-      </ul>
-      <ul class="side-nav" id="mobile-demo">
-        <a ng-repeat="x in headerOptions" ui-sref="{{x.path}}" ng-bind="x.displayName"></a>
-      </ul>
+<div class="navbar-wrapper">
+  <div class="container">
+      <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span ng-repeat="x in headerOptions" sclass="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#" ng-bind="brandName"></a>
+              </div>
+              <div id="navbar" class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav">
+                      <li ng-repeat="x in headerOptions" ><a ui-sref="{{x.path}}" ng-bind="x.displayName"></a></li>
+                      <li class="srch-btn"><a href="#"><i class="glyphicon glyphicon-search"></i></li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
   </div>
-</nav>
+</div>
